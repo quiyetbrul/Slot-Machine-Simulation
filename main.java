@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-public class HW6i
+public class SlotMachineSim
 {
     public static void main(String[] args)
     {
