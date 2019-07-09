@@ -1,12 +1,12 @@
 //  main.java
 //  SlotMachineSimulation
 //
-//  Created by Quiyet Brul on 6/13/19.
+//  Created by Quiyet Brul on 7/4/19.
 //  Copyright © 2019 Quiyet Brul. All rights reserved.
 
 import java.util.*;
 
-public class SlotMachineSim
+public class SlotMachine
 {
     public static void main(String[] args)
     {
@@ -62,29 +62,27 @@ public class SlotMachineSim
                              imgMatch[imgInd3] + "   ");
                              
             //RESULTS MATCHING + PRIZE                 
-            if (imgMatch[imgInd1] == imgMatch[imgInd2] ||
+            if (imgMatch[imgInd1] == imgMatch[imgInd2] &&
+                imgMatch[imgInd1] == imgMatch[imgInd3])
+                {
+                    System.out.println("You won triple!");
+                    prize = 3 * gambleMoney;
+                    prizeTotal += prize;                    
+                }
+            else if (imgMatch[imgInd1] == imgMatch[imgInd2] ||
                 imgMatch[imgInd1] == imgMatch[imgInd3] ||
                 imgMatch[imgInd2] == imgMatch[imgInd3])
                 {
                     System.out.println("You won double!");
                     prize = 2 * gambleMoney;
-                    System.out.println("Round Prize: " + prize);  
-                    prizeTotal += prize;
-                }
-            else if (imgMatch[imgInd1] == imgMatch[imgInd2] &&
-                imgMatch[imgInd1] == imgMatch[imgInd3] &&
-                imgMatch[imgInd2] == imgMatch[imgInd3])
-                {
-                    System.out.println("You won triple!");
-                    prize = 3 * gambleMoney;
-                    System.out.println("Round Prize: " + prize);  
                     prizeTotal += prize;
                 }
             else
                 {
                     System.out.println("You lost!");
                 }
-                
+            
+            System.out.println("Round Prize: " + prize); 
             
             
             //REPEAT
