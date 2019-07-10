@@ -6,12 +6,12 @@
 
 import java.util.*;
 
-public class SlotMachine
+public class HW6i
 {
     public static void main(String[] args)
     {
         Scanner userInput = new Scanner(System.in);
-        Random imgIdx = new Random();
+        Random rand = new Random();
         
         boolean isNumber;  
         char ans, ansFormat;
@@ -52,26 +52,26 @@ public class SlotMachine
             } while(!(isNumber));
             
             //RANDOMIZED RESULTS
-            int imgInd1 = imgIdx.nextInt(5);
-            int imgInd2 = imgIdx.nextInt(5);
-            int imgInd3 = imgIdx.nextInt(5);
+            int imgIdx1 = rand.nextInt(6);
+            int imgIdx2 = rand.nextInt(6);
+            int imgIdx3 = rand.nextInt(6);
             String[] imgMatch = {"Cherries", "Oranges", "Plums", "Bells", "Melons", "Bars"};
             System.out.print("\nResults: ");
-            System.out.println(imgMatch[imgInd1] + "   " +
-                             imgMatch[imgInd2] + "   " +
-                             imgMatch[imgInd3] + "   ");
+            System.out.println(imgMatch[imgIdx1] + "   " +
+                             imgMatch[imgIdx2] + "   " +
+                             imgMatch[imgIdx3] + "   ");
                              
             //RESULTS MATCHING + PRIZE                 
-            if (imgMatch[imgInd1] == imgMatch[imgInd2] &&
-                imgMatch[imgInd1] == imgMatch[imgInd3])
+            if (imgMatch[imgIdx1] == imgMatch[imgIdx2] &&
+                imgMatch[imgIdx1] == imgMatch[imgIdx3])
                 {
                     System.out.println("You won triple!");
                     prize = 3 * gambleMoney;
                     prizeTotal += prize;                    
                 }
-            else if (imgMatch[imgInd1] == imgMatch[imgInd2] ||
-                imgMatch[imgInd1] == imgMatch[imgInd3] ||
-                imgMatch[imgInd2] == imgMatch[imgInd3])
+            else if (imgMatch[imgIdx1] == imgMatch[imgIdx2] ||
+                imgMatch[imgIdx1] == imgMatch[imgIdx3] ||
+                imgMatch[imgIdx2] == imgMatch[imgIdx3])
                 {
                     System.out.println("You won double!");
                     prize = 2 * gambleMoney;
