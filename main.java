@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-public class HW6i
+public class Main
 {
     public static void main(String[] args)
     {
