@@ -9,5 +9,6 @@ Skills acquired/enhanced:
 4. creating strings
 
 Live demo: https://repl.it/@quiyetbrul/Slot-Machine-Simulation
+[![Run on Repl.it](https://repl.it/badge/github/quiyetbrul/Slot-Machine-Simulation)](https://repl.it/github/quiyetbrul/Slot-Machine-Simulation)
 
 *if you find any errors or have any suggestions, please don't hesitate to pull a request
